@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Margherita",
+        "base": "regular",
+        "type": "cheese_burst",
+        "category": "veg",
+        "image": "https://media-cdn.tripadvisor.com/media/photo-p/15/2d/23/07/domino-s-pizza.jpg",
+        "price": 480
+    },
+    {
+        "id": 2,
+        "name": "Double cheese",
+        "base": "thin",
+        "type": "cheese_topping",
+        "category": "veg",
+        "image": "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/5/k/h/p55-1493903624590b2908cb9b0.jpg?tr=tr:n-xlarge",
+        "price": 250
+    },
+    {
+        "id": 3,
+        "name": "Paneer chilly",
+        "base": "thin",
+        "type": "cheese_topping",
+        "category": "veg",
+        "image": "https://img.etimg.com/thumb/msid-68680996,width-643,imgsize-1492594,resizemode-4/pizza.jpg",
+        "price": 350
+    },
+    {
+        "id": 4,
+        "name": "Jalapeno king",
+        "base": "flat",
+        "type": "cheese_burst",
+        "category": "veg",
+        "image": "https://www.kingarthurflour.com/sites/default/files/styles/featured_image/public/recipe_legacy/20-3-large.jpg?itok=1EY8KWJG",
+        "price": 325
+    },
+    {
+        "id": 5,
+        "name": "Chicken loaded",
+        "base": "multigrain",
+        "type": "none",
+        "category": "nonveg",
+        "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/9/27/0/KC1812_Spaghetti-Squash-Crust-Pizza_s4x3.jpg.rend.hgtvcom.826.620.suffix/1538057934894.jpeg",
+        "price": 550
+    }
+]

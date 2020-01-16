@@ -1,0 +1,73 @@
+<div class="jumbotron">
+    <h1 class="display-4 text-aligns font-colors">Manav Pizza App</h1>
+    <p class="lead text-aligns">This is the simple pizza app for learning purpose by : Manav Pandya</p>
+</div>
+<div class="container">
+    <div class="row vdivide">
+        <div class="col-sm-4 text-center">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label>Pizza Crust Type</label>
+                    <select class="form-control" [(ngModel)]="breadType" name="breadType">
+                        <option [ngValue]="" selected="true">-- select --</option>
+                        <option [ngValue]="thin" value="thin">Thin crust</option>
+                        <option [ngValue]="regular" value="regular">Regular</option>
+                        <option [ngValue]="flat" value="flat">Flat Bread</option>
+                        <option [ngValue]="multigrain" value="multigrain">Multi Grain</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label>Pizza Type</label>
+                    <select class="form-control" [(ngModel)]="pizzaType" name="pizzaType">
+                        <option>-- select --</option>
+                        <option [ngValue]="cheese_burst" value="cheese_burst">Cheese Burst</option>
+                        <option [ngValue]="cheese_topping" value="cheese_topping">Cheese Topping</option>
+                        <option [ngValue]="none" value="none">No cheese</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <label>Pizza Category</label>
+                    <select class="form-control" [(ngModel)]="pizzaCategory" name="pizzaCategory">
+                        <option>-- select --</option>
+                        <option [ngValue]="veg" value="veg">Veg</option>
+                        <option [ngValue]="nonveg" value="nonveg">Non Veg</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <ng-container *ngIf="pizzas.length > 0; else noItems">
+            <div class="col-sm-8 text-center">
+                <div *ngFor="let item of pizzas | myfilterpipe: breadType:pizzaType:pizzaCategory" class="card mb-3"
+                    style="max-width: 540px;">
+
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <img class="myimg card-img" src={{item.image}} alt="...">
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.name }}</h5>
+                                <ul class="list-align">
+                                    <li>{{ item.base }}</li>
+                                    <li>{{ item.type }}</li>
+                                    <li>{{ item.category }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="item-price">
+                                Rs. {{ item.price }}/-
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #noItems>
+            NO ITEMS!!!
+        </ng-template>
+    </div>
+</div>
